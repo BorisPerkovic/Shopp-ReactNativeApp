@@ -4,12 +4,14 @@ import { Provider } from "react-redux";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 
-import products from './store/reducers/products';
+import productsReducer from './store/reducers/products';
+import cartReducer from "./store/reducers/cart";
 import ShopNavigator from './navigation/ShopNavigator';
 
 
 const rootReducer = combineReducers({
-  products: products
+  products: productsReducer,
+  cart: cartReducer
 });
 
 const store = createStore(rootReducer);
